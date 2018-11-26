@@ -16,13 +16,17 @@ function getMetaDimensionMultiplier (tier) {
       if (player.masterystudies.includes("t262")) multiplier = multiplier.times(getMTSMult(262))
       if (player.masterystudies.includes("t282")) multiplier = multiplier.times(getMTSMult(282))
       if (player.masterystudies.includes("t303")) multiplier = multiplier.times(getMTSMult(303))
-      if (QCIntensity(3)) multiplier = multiplier.times(Decimal.pow(10,Math.sqrt(Math.max(player.infinityPower.log10(),0)/(QCIntensity(3)>1?2e8:1e9))))
+      multiplier = multiplier.times(getQCReward(3))
       if (player.masterystudies.includes("t351")) multiplier = multiplier.times(getMTSMult(351))
+      if (player.masterystudies.includes("t373")) multiplier = multiplier.times(getMTSMult(373))
+      if (player.masterystudies.includes("t382")) multiplier = multiplier.times(getMTSMult(382))
+      if (player.masterystudies.includes("t383")) multiplier = multiplier.times(getMTSMult(383))
+      if (player.masterystudies.includes("t393")) multiplier = multiplier.times(getMTSMult(393))
   }
   if (GUBought("rg3")&&tier<2) multiplier = multiplier.times(player.resets)
   if (GUBought("br4")) multiplier = multiplier.times(Decimal.pow(getDimensionPowerMultiplier(), 0.0003))
   if (tier%2>0) multiplier = multiplier.times(QC4Reward)
-  if (QCIntensity(6)) multiplier = multiplier.times(player.achPow.pow(QCIntensity(6)>1?3:1))
+  multiplier = multiplier.times(getQCReward(6))
   
   if (multiplier.lt(1)) multiplier = new Decimal(1)
   if (player.dilation.active || player.galacticSacrifice) {
@@ -240,7 +244,6 @@ function getExtraDimensionBoostPower() {
 		let power=8
 		if (player.dilation.upgrades.includes("ngpp5")) power++
 		power+=ECTimesCompleted("eterc13")*0.2
-		if (player.masterystudies) if (player.masterystudies.includes('t313')) power++
 		return player.meta.bestAntimatter.pow(power).plus(1)
 	}
 }
@@ -262,7 +265,7 @@ function updateMetaDimensions () {
 		if (!canBuyMetaDimension(tier) && document.getElementById(tier + "MetaRow").style.display !== "table-row") {
 			break;
 		}
-		document.getElementById(tier + "MetaD").childNodes[0].nodeValue = DISPLAY_NAMES[tier] + " Meta Dimension x" + formatValue(player.options.notation, getMetaDimensionMultiplier(tier), 1, 1);
+		document.getElementById(tier + "MetaD").childNodes[0].nodeValue = DISPLAY_NAMES[tier] + " Meta Dimension x" + formatValue(player.options.notation, getMetaDimensionMultiplier(tier), 2, 1);
 		document.getElementById("meta" + tier + "Amount").textContent = getMetaDimensionDescription(tier);
 	}
 	for (let tier = 1; tier <= 8; ++tier) {
@@ -542,7 +545,7 @@ function quantumReset(force, auto, challid, implode=false) {
 		showDimTab("antimatterdimensions")
 		showChallengesTab("challenges")
 		showInfTab("preinf")
-		showEternityTab("timestudies", true)
+		showEternityTab("timestudies", document.getElementById("eternitystore").style.display != "block" && document.getElementById("timestudies").style.display != "block")
 	}
 	if (!quantumed) {
 		quantumed=true
@@ -590,6 +593,7 @@ function quantumReset(force, auto, challid, implode=false) {
 		player.quantum.times++
 		if (!inQC(6)) player.quantum.quarks = player.quantum.quarks.plus(qkGain);
 		if (!inQC(4)) if (player.meta.resets<1) giveAchievement("Infinity Morals")
+		if (player.dilation.rebuyables[0] + player.dilation.rebuyables[1] + player.dilation.rebuyables[2] + player.dilation.rebuyables[3] < 1 && player.dilation.upgrades.length < 1) giveAchievement("Never make paradoxes!")
 	}
 	var oheHeadstart = speedrunMilestonesReached > 0
 	var oldTime = player.quantum.time
@@ -864,7 +868,7 @@ function quantumReset(force, auto, challid, implode=false) {
 		dilation: {
 			studies: isRewardEnabled(4) ? (speedrunMilestonesReached > 5 ? [1,2,3,4,5,6] : [1]) : [],
 			active: false,
-			tachyonParticles: new Decimal(0),
+			tachyonParticles: player.achievements.includes("ng3p37") ? player.dilation.bestTP.sqrt() : new Decimal(0),
 			dilatedTime: new Decimal(speedrunMilestonesReached>21 && isRewardEnabled(4)?1e100:0),
 			totalTachyonParticles: new Decimal(0),
 			bestTP: player.dilation.bestTP,
@@ -930,6 +934,7 @@ function quantumReset(force, auto, challid, implode=false) {
 		galaxyMaxBulk: player.galaxyMaxBulk,
 		quantum: player.quantum,
 		old: player.masterystudies ? inQC(0) : undefined,
+		dontWant: player.masterystudies ? true : undefined,
 		aarexModifications: player.aarexModifications
 	};
 	if (player.challenges.includes("challenge1")) player.money = new Decimal(100)
@@ -974,7 +979,8 @@ function quantumReset(force, auto, challid, implode=false) {
 					player.quantum.challenges[qc1]=1
 					player.quantum.electrons.mult+=0.25
 				}
-				player.quantum.challengeRecords[qc1]=oldTime
+				if (player.quantum.challengeRecords[qc1] == undefined) player.quantum.challengeRecords[qc1]=oldTime
+				else player.quantum.challengeRecords[qc1]=Math.min(player.quantum.challengeRecords[qc1],oldTime)
 			}
 			if (player.quantum.pairedChallenges.respec) {
 				player.quantum.electrons.mult-=player.quantum.pairedChallenges.completed*0.5
@@ -982,6 +988,7 @@ function quantumReset(force, auto, challid, implode=false) {
 					order: {},
 					current: 0,
 					completed: 0,
+					completions: player.quantum.pairedChallenges.completions,
 					respec: false
 				}
 				for (qc=1;qc<9;qc++) player.quantum.challenges[qc]=1
@@ -1001,13 +1008,16 @@ function quantumReset(force, auto, challid, implode=false) {
 		player.quantum.replicants.amount = new Decimal(0)
 		player.quantum.replicants.requirement = new Decimal("1e3000000")
 		player.quantum.replicants.quarks = new Decimal(0)
-		player.quantum.replicants.quantumFood += Math.round(player.quantum.replicants.workerProgress.toNumber()*3)
-		player.quantum.replicants.workerProgress = new Decimal(0)
 		player.quantum.replicants.eggonProgress = new Decimal(0)
 		player.quantum.replicants.eggons = new Decimal(0)
 		player.quantum.replicants.babyProgress = new Decimal(0)
 		player.quantum.replicants.babies = new Decimal(0)
 		player.quantum.replicants.growupProgress = new Decimal(0)
+		for (d=1;d<9;d++) {
+			if (d>7||eds[d].perm<10) player.quantum.replicants.quantumFood+=Math.round(eds[d].progress.toNumber()*3)%3
+			eds[d].workers=new Decimal(eds[d].perm)
+			eds[d].progress=new Decimal(0)
+		}
 		document.getElementById("metaAntimatterEffectType").textContent=inQC(3)?"multiplier on all Infinity Dimensions":"extra multiplier per dimension boost"
 		updateColorCharge()
 		updateGluons()
@@ -1134,11 +1144,17 @@ function quantumReset(force, auto, challid, implode=false) {
 	if (!isRewardEnabled(4)) if (document.getElementById("dilation").style.display=="block") showEternityTab("timestudies", document.getElementById("eternitystore").style.display=="block")
 	if (speedrunMilestonesReached < 14 || !isRewardEnabled(4)) {
 		document.getElementById("masterystudyunlock").style.display = "none"
-		document.getElementById("emperorstudies").style.display = "none"
 		document.getElementById("respecMastery").style.display = "none"
 		document.getElementById("respecMastery2").style.display = "none"
+		document.getElementById("replicantsstudies").style.display = "none"
+		document.getElementById("timestudy322").style.display="none"
+		document.getElementById("empstudies").style.display = "none"
+		document.getElementById("timestudy361").style.display = "none"
+		document.getElementById("timestudy362").style.display = "none"
+		document.getElementById("edtabbtn").style.display = "none"
 		if (document.getElementById("metadimensions").style.display == "block") showDimTab("antimatterdimensions")
 		if (document.getElementById("masterystudies").style.display=="block") showEternityTab("timestudies", document.getElementById("eternitystore").style.display=="block")
+		if (document.getElementById("emperordimensions").style.display == "block") showDimTab("antimatterdimensions")
 		if (document.getElementById("quantumchallenges").style.display == "block") showChallengesTab("normalchallenges")
 		if (document.getElementById("electronstabbtn").style.display == "block"||document.getElementById("replicantstabbtn").style.display == "block") showQuantumTab("uquarks")
 	}

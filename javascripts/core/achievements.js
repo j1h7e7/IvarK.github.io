@@ -133,6 +133,14 @@ const allAchievements = {
   ng3p26 : "Infinity Morals",
   ng3p27 : "Intergalactic",
   ng3p28 : "Seriously, I already got rid of you.",
+  ng3p31 : "ERROR 500: INTERNAL DIMENSION ERROR",
+  ng3p32 : "The truth of anti-challenged",
+  ng3p33 : "Never make paradoxes!",
+  ng3p34 : "The Challenging Day",
+  ng3p35 : "An ant office?",
+  ng3p36 : "I can’t get my multipliers higher!",
+  ng3p37 : "No dilation means no production.",
+  ng3p38 : "I don't want you to live anymore.",
   s11 : "The first one's always free",
   s12 : "Just in case",
   s13 : "It pays to have respect",
@@ -252,8 +260,8 @@ function giveAchievement(name) {
         for (i=1;i<9;i++) document.getElementById("td"+i+'auto').style.visibility="visible"
     }
     if (name == "It will never be enough") document.getElementById('replicantibulkmodetoggle').style.display="inline-block"
-    if (name == "I already got rid of you...") {
-        player.dilation.bestTP=player.dilation.tachyonParticles
+    if (name == "I already got rid of you..." || name == "No dilation means no production.") {
+        if (player.dilation.bestTP == undefined) player.dilation.bestTP=player.dilation.tachyonParticles
         document.getElementById('bestTP').style.display=""
         document.getElementById('bestTP').textContent="Your best ever Tachyon particles was "+shorten(player.dilation.bestTP)+"."
     }
@@ -262,7 +270,7 @@ function giveAchievement(name) {
 
 function updateAchievements() {
 	var amount = 0
-	for (var i=1; i<17; i++) {
+	for (var i=1; i<18; i++) {
 		var shown=false
 		var rowid=i
 		if (i>14) {

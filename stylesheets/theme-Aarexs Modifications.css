@@ -334,9 +334,9 @@ strong { color: #0072e5 }
     color: #191919 !important;
     border-color: #191919 !important
 }
-#blackHoleTabbtn button, #blackholeunlock.storebtn, #blackholediv .eternityupbtn, #blackholediv table .storebtn, #dilstudy10.dilationupg, #replicantstabbtn button, #replicantReset.storebtn { border: 2px solid #333333 !important }
-#blackHoleTabbtn button:hover, #blackholeunlock.storebtn:hover, #blackholediv .eternityupbtn:hover, #blackholediv table .storebtn:hover, #dilstudy10.dilationupg:hover, #dilstudy10.dilationupgbought, #replicantstabbtn button:hover, #replicantReset.storebtn:hover { background-color: #333333 !important }
-#blackholePowAmount, #DilMultAmount, #InfAndReplMultAmount, #replicantAmount, #workerReplAmount, #babyReplAmount, #workerProgress, #hatchProgress, #growupProgress { color: #333333 !important }
+#blackHoleTabbtn button, #blackholeunlock.storebtn, #blackholediv .eternityupbtn, #blackholediv table .storebtn, #replicantstabbtn button, #replicantReset.storebtn, #edtabbtn button { border: 2px solid #333333 !important }
+#blackHoleTabbtn button:hover, #blackholeunlock.storebtn:hover, #blackholediv .eternityupbtn:hover, #blackholediv table .storebtn:hover, #replicantstabbtn button:hover, #replicantReset.storebtn:hover, #edtabbtn button:hover { background-color: #333333 !important }
+#blackholePowAmount, #DilMultAmount, #InfAndReplMultAmount, #replicantAmount, #workerReplAmount, #babyReplAmount, #workerProgress, #hatchProgress, #growupProgress, #replicantAmountED { color: #333333 !important }
 #reversedilation.dilationupg, #xdrow .dilationupgrebuyable { border-color: #16e528 !important }
 #reversedilation.dilationupg:hover, #xdrow .dilationupgrebuyable:hover  { background-color: #16e528 !important }
 #exDilationAmount { color:  #16e528 !important }
@@ -365,7 +365,7 @@ strong { color: #0072e5 }
 #progressbar.quantumProgress {
 	background-color: #009900 !important
 }
-.QKAmount, #gatheredQuarks, #normalReplGatherRate, #workerReplGatherRate, #babyReplGatherRate, #gatherRate { color: #009900 !important }
+.QKAmount, #gatheredQuarks, #normalReplGatherRate, #workerReplGatherRate, #babyReplGatherRate, #gatherRate, .empQuarks { color: #009900 !important }
 .red { color: #e50000 }
 .green, #quarkTranslation { color: #00e500 }
 .blue { color: #0000e5 }
@@ -388,6 +388,7 @@ strong { color: #0072e5 }
 }
 #dilstudy7.dilationupg:hover, #electronstabbtn button:hover, #dilstudy7.dilationupgbought, #electrons .storebtn:hover { background-color: #d2e500 !important }
 #electronsAmount, #electronsTranslation { color: #d2e500 !important }
+#electronsEffect { color: #00e500 !important }
 .quantumchallengediv {
     background-color: #191919 !important;
     font-family:'Inconsolata', monospace !important;
@@ -412,9 +413,11 @@ strong { color: #0072e5 }
     color: #e5e5e5 !important;
     border-radius: 0px !important
 }
-#quantumFoodAmount { color: #b7e5b7 !important }
-#buyQuantumFood.storebtn, #feedNormal.storebtn, #feedBaby.storebtn, #breakLimit.storebtn { border: 2px solid #b7e5b7 !important }
-#buyQuantumFood.storebtn:hover, #feedNormal.storebtn:hover, #feedBaby.storebtn:hover, #breakLimit.storebtn:hover { background-color: #b7e5b7 !important }
+#dilstudy10.dilationupg, #dilstudy11.dilationupg { border: 2px solid #333333 !important }
+#dilstudy10.dilationupg:hover, #dilstudy10.dilationupgbought, #dilstudy11.dilationupg:hover, #dilstudy11.dilationupgbought { background-color: #333333 !important }
+#quantumFoodAmount, #quantumFoodAmountED { color: #b7e5b7 !important }
+#buyQuantumFood.storebtn, #buyMaxQuantumFood.storebtn, #feedNormal.storebtn, #feedBaby.storebtn, #breakLimit.storebtn, #emperordimensions .storebtn, #buyQuantumFoodED .storebtn, #buyMaxQuantumFoodED .storebtn { border: 2px solid #b7e5b7 !important }
+#buyQuantumFood.storebtn:hover, #buyMaxQuantumFood.storebtn:hover, #feedNormal.storebtn:hover, #feedBaby.storebtn:hover, #breakLimit.storebtn:hover, #emperordimensions .storebtn:hover, #buyQuantumFoodED .storebtn:hover, #buyMaxQuantumFoodED .storebtn:hover { background-color: #b7e5b7 !important }
 #eggonAmount, #eggonRate { color: #e5dab7 !important }
 #reduceHatchSpeed.storebtn { border: 2px solid #e5dab7 !important }
 #reduceHatchSpeed.storebtn:hover { background-color: #e5dab7 !important }

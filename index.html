@@ -245,7 +245,7 @@
                     <tr>
                         <td><button class="eternitychallengestudy" id="ec1unl">Eternity Challenge 1<span>Requirement: 25,000 Eternities<span>Cost: 20 Time Theorems</button></td>
                         <td><button class="eternitychallengestudy" id="ec2unl" style="font-size: 10px;">Eternity Challenge 2<span>Requirement: 1,300 Time upgrades gained from time dimensions<span>Cost: 25 Time Theorems</button></td>
-                        <td><button class="eternitychallengestudy" id="ec3unl">Eternity Challenge 3<span>Requirement: 30 dicks in your ass<span>Cost: 30 Time Theorems</button></td>
+                        <td><button class="eternitychallengestudy" id="ec3unl"></button></td>
                     </tr>
                 </table>
                 <table class="table" id="studytable">
@@ -489,30 +489,55 @@
                         <td><button class="timestudylocked" id="timestudy323" style='font-size:10px' onclick='buyMasteryStudy("t", 323)'>Cancel dilation penalty for Normal Dimensions boost from replicanti.</span></button></td>
                     </tr>
                 </table>
+                </div>
+                <div id="replicantsstudies">
                 <table class="table" id="studytable">
                     <tr>
-                        <td><button class="timestudylocked" id="timestudy331" style='font-size:10px' onclick='buyMasteryStudy("t", 331)'>Dimension Supersonic scaling starts 160,000 later and increases cost slower by 3 less.</span></button></td>
+                        <td><button class="timestudylocked" id="timestudy331" style='font-size:10px' onclick='buyMasteryStudy("t", 331)'>Dimension Supersonic scaling starts 340,000 later and increases cost slower by 3 less.</span></button></td>
                         <td><button class="timestudylocked" id="timestudy332" onclick='buyMasteryStudy("t", 332)'>You gain replicanti faster based on your normal galaxies.</span></button></td>
                     </tr>
                 </table>
+                <table class="table" id="studytable">
+                    <tr>
+                        <td><button class="timestudylocked" id="timestudy341" style='font-size:10px' onclick='buyMasteryStudy("t", 341)'>Gathered quarks boost DT production at reduced rate.<br><span id="ts341Current"></span></button></td>
+                        <td><button class="timestudylocked" id="timestudy342" onclick='buyMasteryStudy("t", 342)'>All replicated galaxies are stronger and use the same formula.</button></td>
+                        <td><button class="timestudylocked" id="timestudy343" onclick='buyMasteryStudy("t", 343)'>Free galaxies are strong as a normal replicated galaxy.</button></td>
+                        <td><button class="timestudylocked" id="timestudy344" style='font-size:10px' onclick='buyMasteryStudy("t", 344)'>Replicated galaxies are more effective based on your gathered quarks.<br><span id="ts344Current"></span></button></td>
+                    </tr>
+                </table>
+                <table class="table" id="studytable">
+                    <tr>
+                        <td><button class="timestudylocked" id="timestudy351" onclick='buyMasteryStudy("t", 351)'>Time Shards boost all Meta Dimensions.<br><span id="ts351Current"></span></button></td>
+                    </tr>
+                </table>
+                <table class="table" id="studytable">
+                    <tr>
+                        <td><button class="timestudylocked" id="timestudy361" style='font-size:10px' onclick='buyMasteryStudy("t", 361)'>Hatch speed is faster based on your tachyon particles.<br><span id="ts361Current"></span></button></td>
+                        <td><button class="timestudylocked" id="dilstudy11" onclick='buyMasteryStudy("d", 11)'>Unlock Emperor Dimensions<br><span id="ds11Cost"></span><br>Requirement: 10 worker replicants</button></td>
+                        <td><button class="timestudylocked" id="timestudy362" onclick='buyMasteryStudy("t", 362)'>Reduce the softcap for replicant quark boost.</button></td>
+                    </tr>
+                </table>
                 </div>
-                <div id='emperorstudies'>
+                <div id="empstudies">
                 <table class="table" id="studytable">
                     <tr>
-                        <td><button class="timestudylocked" id="timestudy341" style='font-size:10px' onclick='buyMasteryStudy("t", 341)'>Replicants gather quarks faster based on your galaxies.<br><span id="ts341Current"></span></button></td>
-                        <td><button class="timestudylocked" id="timestudy342" style='font-size:10px' onclick='buyMasteryStudy("t", 342)'>Strengthen all types of replicated galaxies based on your gathered quarks.<br><span id="ts342Current"></span></button></td>
-                        <td><button class="timestudylocked" id="timestudy343" style='font-size:9px' onclick='buyMasteryStudy("t", 343)'>Strengthen free galaxies up to replicated galaxy strength based on your dilated time.<br><span id="ts343Current"></span></button></td>
-                        <td><button class="timestudylocked" id="timestudy344" style='font-size:10px' onclick='buyMasteryStudy("t", 344)'>Galaxies are more effective based on your replicants.<br><span id="ts344Current"></span></button></td>
+                        <td><button class="timestudylocked" id="timestudy371" style='font-size:10px' onclick='buyMasteryStudy("t", 371)'>Hatch speed is faster based on your extra replicated galaxies.<br><span id="ts371Current"></span></button></td>
+                        <td><button class="timestudylocked" id="timestudy372" style='font-size:10px' onclick='buyMasteryStudy("t", 372)'>Hatch speed is faster based on your time shards.<br><span id="ts372Current"></span></button></td>
+                        <td><button class="timestudylocked" id="timestudy373" style='font-size:10px' onclick='buyMasteryStudy("t", 373)'>Replicants gather more quarks based on your galaxies.<br><span id="ts373Current"></span></button></button></td>
                     </tr>
                 </table>
                 <table class="table" id="studytable">
                     <tr>
-                        <td><button class="timestudylocked" id="timestudy351" onclick='buyMasteryStudy("t", 351)'>Time Shards boosts all Meta Dimensions.<br><span id="ts351Current"></span></button></td>
+                        <td><button class="timestudylocked" id="timestudy381" style='font-size:10px' onclick='buyMasteryStudy("t", 381)'>Hatch speed is faster based on your tickspeed reduction multiplier.<br><span id="ts381Current"></span></button></td>
+                        <td><button class="timestudylocked" id="timestudy382" onclick='buyMasteryStudy("t", 382)'>Eighth Dimensions boost Meta Dimensions.<br><span id="ts382Current"></span></button></td>
+                        <td><button class="timestudylocked" id="timestudy383" onclick='buyMasteryStudy("t", 383)'>Blue power boosts Meta Dimensions.<br><span id="ts383Current"></span></button></td>
                     </tr>
                 </table>
                 <table class="table" id="studytable">
                     <tr>
-                        <td><button class="timestudylocked" id="dilstudy11">Unlock Emperor Dimensions<br>(Coming soon!)</button></td>
+                        <td><button class="timestudylocked" id="timestudy391" style='font-size:10px' onclick='buyMasteryStudy("t", 391)'>Hatch speed is faster based on your meta-antimatter.<br><span id="ts391Current"></span></button></td>
+                        <td><button class="timestudylocked" id="timestudy392" onclick='buyMasteryStudy("t", 392)'>Gathered quarks boost all Emperor Dimensions.<br><span id="ts392Current"></span></button></td>
+                        <td><button class="timestudylocked" id="timestudy393" onclick='buyMasteryStudy("t", 393)'>Workers boost Meta Dimensions.<br><span id="ts393Current"></span></button></td>
                     </tr>
                 </table>
                 <table class="table" id="studytable">
@@ -699,21 +724,19 @@
                         <td><button class="milestonerewardlocked" id="reward22">Unlock autobuyer for replicanti galaxy upgrade</button></td>
                         <td><button class="milestonerewardlocked" id="reward23">Unlock autobuyer for Eternities</button></td>
                     </tr>
-                </table>
-                <table id='mdmilestones'>
-                    <tr>
+                    <tr id='mdmilestonesrow1a'>
                         <td class="milestoneText" id='milestone24'></td>
                         <td class="milestoneText" id='milestone25'></td>
                     </tr>
-                    <tr>
+                    <tr id='mdmilestonesrow1b'>
                         <td><button class="milestonerewardlocked" id="reward24">When you dimension boost, you keep your antimatter and dimensions</button></td>
                         <td><button class="milestonerewardlocked" id="reward25">You permanently keep replicate chance & replicanti interval</button></td>
                     </tr>
-                    <tr>
+                    <tr id='mdmilestonesrow2a'>
                         <td class="milestoneText" id='milestone26'></td>
                         <td class="milestoneText" id='milestone27'></td>
                     </tr>
-                    <tr>
+                    <tr id='mdmilestonesrow2b'>
                         <td><button class="milestonerewardlocked" id="reward26">Unlock replicanti amount mode for eternity autobuyer</button></td>
                         <td><button class="milestonerewardlocked" id="reward27">Unlock time since peak changed mode for eternity autobuyer</button></td>
                     </tr>
@@ -936,6 +959,7 @@
                     <td id="idtabbtn"><button class="secondarytabbtn" onclick="showDimTab('infinitydimensions')">Infinity Dimensions</button></td>
                     <td id="tdtabbtn"><button class="secondarytabbtn" onclick="showDimTab('timedimensions')">Time Dimensions</button></td>
                     <td id="mdtabbtn"><button class="secondarytabbtn" onclick="showDimTab('metadimensions')">Meta Dimensions</button></td>
+                    <td id="edtabbtn"><button class="secondarytabbtn" onclick="showDimTab('emperordimensions')">Emperor Dimensions</button></td>
                     <td id="prodtabbtn"><button class="secondarytabbtn" onclick="showDimTab('production')">Production</button></td>
                 </tr>
             </table>
@@ -1484,6 +1508,24 @@
                 </table>
                 <button id="metaboostauto" style="width:160px; height: 30px; font-size: 12px" onclick="toggleAutoEter('metaboost')" class="storebtn">Toggle all ON/OFF</button>
                 <button id="toggleallmetadims" style="width:300px; height: 30px; font-size: 12px" onclick="toggleAllMetaDims()" class="storebtn">Toggle all meta-dims autobuyer ON/OFF</button>
+            </div>
+            <div id="emperordimensions" class="dimtab">
+                <div>
+                    <p>You have <span id="replicantAmountED" style="font-size:35px; color: black">0</span> normal replicants.</p>
+                </div>
+                <p>You have <span id="quantumFoodAmountED">0</span> quantum food.</p>
+                <button class='gluonupgrade storebtn' id='buyQuantumFoodED' onclick='buyQuantumFood()'></button><br>
+                <button class='storebtn' id='buyMaxQuantumFoodED' onclick='buyMaxQuantumFood()' style="width: 190px">Max buy quantum food</button>
+                <table class="table" id="empDimTable">
+                    <tr style="font-size: 16px">
+                        <td>Total: </td>
+                        <td id="totalWorkers"></td>
+                        <td>
+                            <span class="empQuarks" id="totalQuarkProduction"></span> quarks/s
+						</td>
+                    </tr>
+                </table>
+                <button id='breakLimitED' class='storebtn' style='width: 280px; height: 40px' onclick='breakLimit()'></button>
             </div>
             <div id="production" class="dimtab">
                 <b>seconds of history:</b>
@@ -2217,6 +2259,32 @@
                                 <div id="Seriously, I already got rid of you." class="achievement achievementlocked" style="background-image: url(images/120.png)"><br></div>
                             </td>
                         </tr>
+                        <tr id="achRowng3p3">
+                            <td>
+                                <div id="ERROR 500: INTERNAL DIMENSION ERROR" class="achievement achievementlocked" style="background-image: url(images/127.png)"></div>
+                            </td>
+                            <td>
+                                <div id="The truth of anti-challenged" class="achievement achievementlocked" style="background-image: url(images/128.png)"></div>
+                            </td>
+                            <td>
+                                <div id="Never make paradoxes!" class="achievement achievementlocked" style="background-image: url(images/129.png)" ach-tooltip="Quantum without having dilation upgrades."></div>
+                            </td>
+                            <td>
+                                <div id="The Challenging Day" class="achievement achievementlocked" style="background-image: url(images/130.png)" ach-tooltip="Complete 24 unique paired challenge combinations."></div>
+                            </td>
+                            <td>
+                                <div id="An ant office?" class="achievement achievementlocked" style="background-image: url(images/131.png)" ach-tooltip="Promote a worker into the second dimension. Reward: Replicants feed babies 10x faster."></div>
+                            </td>
+                            <td>
+                                <div id="I can’t get my multipliers higher!" class="achievement achievementlocked" style="background-image: url(images/132.png)"><br></div>
+                            </td>
+                            <td>
+                                <div id="No dilation means no production." class="achievement achievementlocked" style="background-image: url(images/133.png)"><br></div>
+                            </td>
+                            <td>
+                                <div id="I don't want you to live anymore." class="achievement achievementlocked" style="background-image: url(images/134.png)"></div>
+                            </td>
+                        </tr>
                 </table>
             </div>
             <div id="secretachievements" class="achtab" style="display:none;">
@@ -2305,7 +2373,7 @@
                 <div>Get your best quantum to reach below the requirement for a reward!</div>
                 <button class='storebtn' id='reward3disable' onclick='disableReward(3)' style='width:180px'>6 hours reward: ON</button>
                 <button class='storebtn' id='reward4disable' onclick='disableReward(4)' style='width:180px'>4.5 hours reward: ON</button>
-                <button class='storebtn' id='reward27disable' onclick='disableReward(27)' style='width:180px'>10 seconds reward: ON</button>
+                <button class='storebtn' id='reward27disable' onclick='disableReward(27)' style='width:190px'>10 seconds reward: ON</button>
                 <table id="secretachievementtable" style="margin: auto">
                     <tr id="speedrunRow1">
                         <td><div id="speedrunMilestone1" style="background-image: url(images/quantum_speedruns/1.png)" ach-tooltip="Reward: Start with 20,000 eternities."></div></td>
@@ -2998,7 +3066,7 @@
                                     <br>
                                     <span id="qc1cost"></span><br>
                                     <span id="qc1goal"></span><br>
-                                    Reward: Add 0.25x to electron gain multiplier and First & Second Dimensions boosts dilated time production.
+                                    Reward: Add 0.25x to electron gain multiplier and First & Second Dimensions boosts dilated time production. Currently: <span id="qc1reward"></span>x
                                 </div>
                             </div>
                         </td>
@@ -3012,7 +3080,7 @@
                                     <br>
                                     <span id="qc2cost"></span><br>
                                     <span id="qc2goal"></span><br>
-                                    Reward: Add 0.25x to electron gain multiplier and get 40% more free galaxies.
+                                    Reward: Add 0.25x to electron gain multiplier and gain more free galaxies for each threshold. Currently: <span id="qc2reward"></span>%
                                 </div>
                             </div>
                         </td>
@@ -3028,7 +3096,7 @@
                                     <br>
                                     <span id="qc3cost"></span><br>
                                     <span id="qc3goal"></span><br>
-                                    Reward: Add 0.25x to electron gain multiplier and Infinity power boosts meta dimensions at greatly reduced rate.
+                                    Reward: Add 0.25x to electron gain multiplier and Infinity power boosts meta dimensions at greatly reduced rate. Currently: <span id="qc3reward"></span>x
                                 </div>
                             </div>
                         </td>
@@ -3042,14 +3110,14 @@
                                     <br>
                                     <span id="qc4cost"></span><br>
                                     <span id="qc4goal"></span><br>
-                                    Reward: Add 0.25x to electron gain multiplier and all even Meta Dimensions boost all odd Meta Dimensions.
+                                    Reward: Add 0.25x to electron gain multiplier and all even Meta Dimensions boost all odd Meta Dimensions. Currently: <span id="qc4reward"></span>x
                                 </div>
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <div class="quantumchallengediv" id="qc5div">
+                            <div class="quantumchallengediv" id="qc5div" style="height:160px">
                                 <span>Dimension Supersonic scaling starts instantly and grows much faster. Replicated galaxy cost and free galaxy threshold also grow much faster. Multiplier per ten dimensions is disabled.</span>
                                 <br>
                                 <br>
@@ -3058,12 +3126,12 @@
                                     <br>
                                     <span id="qc5cost"></span><br>
                                     <span id="qc5goal"></span><br>
-                                    Reward: Add 0.25x to electron gain multiplier and multiplier per ten dimensions is boosted by dimension boosts.
+                                    Reward: Add 0.25x to electron gain multiplier and multiplier per ten dimensions is boosted by dimension boosts. Currently: <span id="qc5reward"></span>x
                                 </div>
                             </div>
                         </td>
                         <td>
-                            <div class="quantumchallengediv" id="qc6div">
+                            <div class="quantumchallengediv" id="qc6div" style="height:160px">
                                 <span>All Infinity Challenges except IC1, IC4, and IC5 are applied to all dimensions except Meta Dimensions. You can't gain and lose dimension boosts or else you will fail. Multiplier per ten meta dimensions is a little bit stronger.</span>
                                 <br>
                                 <br>
@@ -3072,7 +3140,7 @@
                                     <br>
                                     <span id="qc6cost"></span><br>
                                     <span id="qc6goal"></span><br>
-                                    Reward: Add 0.25x to electron gain multiplier and Meta Dimensions gain a multiplier based on your achievement bonus.
+                                    Reward: Add 0.25x to electron gain multiplier and Meta Dimensions gain a multiplier based on your achievement bonus. Currently: <span id="qc6reward"></span>x
                                 </div>
                             </div>
                         </td>
@@ -3088,7 +3156,7 @@
                                     <br>
                                     <span id="qc7cost"></span><br>
                                     <span id="qc7goal"></span><br>
-                                    Reward: Add 0.25x to electron gain multiplier and decrease the free tickspeed upgrade threshold increase by 2.5%.
+                                    Reward: Add 0.25x to electron gain multiplier and decrease the free tickspeed upgrade threshold increase. Currently: <span id="qc7reward"></span>%
                                 </div>
                             </div>
                         </td>
@@ -3102,7 +3170,7 @@
                                     <br>
                                     <span id="qc8cost"></span><br>
                                     <span id="qc8goal"></span><br>
-                                    Reward: Add 0.25x to electron gain multiplier and extra replicated galaxy scaling is 3x faster.
+                                    Reward: Add 0.25x to electron gain multiplier and extra replicated galaxy scaling is faster after 100. Currently: <span id="qc8reward"></span>x
                                 </div>
                             </div>
                         </td>
@@ -3872,7 +3940,7 @@
 					</td>
 					<td>
 						<p>You have <span class="blue" id="bluePower" style="font-size:35px">0.0</span> blue power.<br>
-						Translated to <span class="blue" id="blueTranslation" style="font-size:35px">1.0</span>x more dilated time production.</p>
+						Translated to <span class="blue" id="blueTranslation" style="font-size:35px">1.0</span>x dilated time production<span id="bluePowerMDEffect"> and <span class="blue" id="blueTranslationMD" style="font-size:35px">1.0</span>x production from all Meta Dimensions</span>.</span>
 					</td>
 				</tr></table>
 			</div>
@@ -3885,7 +3953,7 @@
 					<td><button id='rgupg1' onclick='buyGluonUpg("rg",1)'>Remote galaxy cost scaling is reduced.<br>Cost: 1 RG gluons</button></td>
 					<td><button id='rgupg2' onclick='buyGluonUpg("rg",2)'>Galaxies are more effective based on your free galaxies.<br>Cost: 2 RG gluons</button></td>
 					<td><button id='gbupg1' onclick='buyGluonUpg("gb",1)'>You gain replicanti faster based on your tickspeed reduction multiplier.<br>Cost: 1 GB gluons</button></td>
-					<td><button id='gbupg2' onclick='buyGluonUpg("gb",2)'>Replicanti interval increases 2x slower.<br>Cost: 2 GB gluons</button></td>
+					<td><button id='gbupg2' onclick='buyGluonUpg("gb",2)'>Replicate interval scaling is 2x slower.<br>Cost: 2 GB gluons</button></td>
 					<td><button id='brupg1' onclick='buyGluonUpg("br",1)'>You gain more tachyon particles based on your dilated time.<br><span id='brupg1current'></span><br>Cost: 1 BR gluons</button></td>
 					<td><button id='brupg2' onclick='buyGluonUpg("br",2)'>Sacrifice affects dilated time production.<br><span id='brupg2current'></span><br><span id='brupg1current'></span>Cost: 2 BR gluons</button></td>
 				</tr><tr>
@@ -3919,7 +3987,7 @@
 			</div>
 			<div class='quantumtab' id='electrons'>
 				You have <span id="electronsAmount" style="font-size:35px">0</span> electrons.<br>
-				Multiplier per ten dimensions is raised to the power of <span id="electronsTranslation" style="font-size:35px">1.00</span>.<br>
+				Raised to the power of <span id="electronsTranslation" style="font-size:35px">1.00</span>, multiplier per ten dimensions is currently <span id="electronsEffect" style="font-size:35px">2.00</span>x.<br>
 				You sacrificed <span id='sacrificedGals'>0</span> galaxies.<br>
 				<button class='storebtn' id='sacrifice1' onclick='sacrificeGalaxy(1)' style='width:250px'>Sacrifice 1 normal galaxy</button><br>
 				<button class='storebtn' id='sacrifice2' onclick='sacrificeGalaxy(2)' style='width:250px'>Sacrifice 10 normal galaxies</button><br>
@@ -3941,26 +4009,27 @@
 				You have <span id="replicantiAmount2">1</span> replicanti.<br>
 				You have <span id="rgRepl">1</span> red-green, <span id="gbRepl">1</span> green-blue, and <span id="brRepl">1</span> blue-red gluons.<br>
 				<table class='qtable'><tr><td>
-					You have <span id="replicantAmount" style="font-size:35px">0</span> replicants.<br>
+					You have <span id="replicantAmount" style="font-size:35px">0</span> normal replicants.<br>
 					They are gathering <span id="normalReplGatherRate" style="font-size:25px">0</span> quarks per second.<br>
-					<button class="storebtn" id="replicantReset" style="width: 220px; height: 80px; font-size: 11px" onclick='replicantReset()'></button>
+					<button class="storebtn" id="replicantReset" style="width: 220px; height: 60px; font-size: 11px" onclick='replicantReset()'></button>
 				</td><td>
-					You have <span id="workerReplAmount" style="font-size:35px">0</span> worker replicants.<br>
+					You have <span id="workerReplAmount" style="font-size:35px">0</span> total worker replicants.<br>
 					They are gathering <span id="workerReplGatherRate" style="font-size:25px">0</span> quarks per second and producing <span id="eggonRate" style="font-size:25px">0</span> eggons per minute.<br>
 					Feed your normal replicant to become a worker. <span id="workerProgress" style="font-size:15px">0.0%</span><br>
-					<button class='storebtn' id='feedNormal' style='width: 240px' onclick="feedReplicant('normal')">Feed one with quantum food</button><br>
-					<button id='breakLimit' class='storebtn' style='width: 240px; height: 60px' onclick='breakLimit()'></button>
+					<button class='storebtn' id='feedNormal' style='width: 280px' onclick="feedReplicant(1)">Feed one with quantum food</button><br>
+					<button id='breakLimit' class='storebtn' style='width: 280px; height: 40px' onclick='breakLimit()'></button>
 				</td><td>
 					You have <span id="babyReplAmount" style="font-size:35px">0</span> baby replicants.<br>
 					They are gathering <span id="babyReplGatherRate" style="font-size:25px">0</span> quarks per second.<br>
 					Grow up your baby replicant. <span id="growupProgress" style="font-size:15px">0.0%</span><br>
-					<button class='storebtn' id='feedBaby' style='width: 240px' onclick="feedReplicant('baby')">Feed one with quantum food</button>
+					<button class='storebtn' id='feedBaby' style='width: 240px' onclick="feedBabyReplicant()">Feed one with quantum food</button>
 				</td></tr><tr><td>
 					All of your replicants gathered <span id="gatheredQuarks" style="font-size:35px">0</span> quarks. <span id="gatherRate" style="font-size:25px">+0/s</span><br>
 					Translated to +<span id="quarkTranslation" style="font-size:35px">0</span>% to more extra replicated galaxies.</p>
 				</td><td>
 					You have <span id="quantumFoodAmount" style="font-size:35px">0</span> quantum food.<br>
-					<button class='gluonupgrade storebtn' id='buyQuantumFood' onclick='buyQuantumFood()'></button>
+					<button class='gluonupgrade storebtn' id='buyQuantumFood' onclick='buyQuantumFood()'></button><br>
+					<button class='storebtn' id='buyMaxQuantumFood' onclick='buyMaxQuantumFood()' style="width: 190px">Max buy quantum food</button>
 				</td><td>
 					You have <span id="eggonAmount" style="font-size:35px">0</span> eggons. <span id="hatchProgress" style="font-size:15px">0.0%</span><br>
 					<button class='storebtn' id='reduceHatchSpeed' style='width: 240px; height: 60px' onclick='reduceHatchSpeed()'></button>
@@ -3985,10 +4054,12 @@
         <div id="failPopup">You failed the challenge, you will now exit it.</div>
         <button class="storebtn" style="font-size: 15px" onclick="closeToolTip()" style="display: inline">Okay</button>
     </div>
-    <div class="popup" id="stuck">
-        <div>If you are stuck on the loading screen, please click "Init" to force init or "Reload" to reload.</div><br><br>
+    <div class="popup" id="stuck" style='height: 180px'>
+        <div>If you are stuck on the loading screen, please click "Init" to force init or "Reload" to reload.</div>
         <button class="storebtn" style="font-size: 15px" onclick="initGame()" style="display: inline">Init</button>
         <button class="storebtn" style="font-size: 15px" onclick="document.location.reload(true)" style="display: inline">Reload</button>
+		<div>If you have reloaded the game and your game still breaks, I recommend you to export the save.</div>
+        <button class="storebtn" style="font-size: 15px" onclick="document.getElementById('exportbtn').click()" style="display: inline">Export</button>
     </div>
 	<div class="popup optionmenu" id="welcome">
         <div><text id="welcomeMessage"></text></div>
@@ -4097,6 +4168,9 @@
 			<b>Spazzy notation</b>
 			<p id='chosenSubNotation'></p>
 			<table id='subNotationOptions'></table>
+			<b>Aarex's Abbreviation System</b>
+			Use hyphen (-) separators: <input type="checkbox" id="useHyphens" onchange="switchOption('aas','useHyphens')"><br>
+			Use De as 1e33: <input type="checkbox" id="useDe" onchange="switchOption('aas','useDe')">
 		</div>
 	</div>
 	<div class="popup optionmenu" id="thememenu" style="overflow-y:hidden">
@@ -4126,30 +4200,30 @@
     </div>
 <script type="text/javascript" src="javascripts/autobuyer.js"></script>
 <script type="text/javascript" src="javascripts/break_infinity.min.js?1"></script>
-<script type="text/javascript" src="javascripts/logarithmica_numerus_lite.js?2"></script>
+<script type="text/javascript" src="javascripts/logarithmica_numerus_lite.js?3"></script>
 <script type="text/javascript" src="javascripts/chart.js"></script>
 <script type="text/javascript" src="javascripts/lz-string.js"></script>
 <script type="text/javascript" src="javascripts/core/polyfill.js"></script>
-<script type="text/javascript" src="javascripts/core/format.js?2"></script>
-<script type="text/javascript" src="javascripts/core/achievements.js?13"></script>
+<script type="text/javascript" src="javascripts/core/format.js?4"></script>
+<script type="text/javascript" src="javascripts/core/achievements.js?14"></script>
 <script type="text/javascript" src="javascripts/core/chart.js"></script>
-<script type="text/javascript" src="javascripts/core/tickspeed.js?24"></script>
-<script type="text/javascript" src="javascripts/core/normal_dimension.js?2"></script>
+<script type="text/javascript" src="javascripts/core/tickspeed.js?26"></script>
+<script type="text/javascript" src="javascripts/core/normal_dimension.js?3"></script>
 <script type="text/javascript" src="javascripts/core/infinity_dimension.js?19"></script>
 <script type="text/javascript" src="javascripts/core/time_dimension.js?21"></script>
-<script type="text/javascript" src="javascripts/core/dimboost.js?2"></script>
-<script type="text/javascript" src="javascripts/core/timestudies.js?4"></script>
+<script type="text/javascript" src="javascripts/core/dimboost.js?4"></script>
+<script type="text/javascript" src="javascripts/core/timestudies.js?6"></script>
 <script type="text/javascript" src="javascripts/core/canvases.js?9"></script>
 <script type="text/javascript" src="javascripts/core/devtools.js"></script>
-<script type="text/javascript" src="javascripts/core/load_functions.js?7"></script>
-<script type="text/javascript" src="javascripts/core/newsticker.js?7"></script>
+<script type="text/javascript" src="javascripts/core/load_functions.js?10"></script>
+<script type="text/javascript" src="javascripts/core/newsticker.js?8"></script>
 <script type="text/javascript" src="javascripts/mods/ngmm.js?23"></script>
 <script type="text/javascript" src="javascripts/mods/ers.js?1"></script>
-<script type="text/javascript" src="javascripts/mods/ngpp.js?5"></script>
-<script type="text/javascript" src="javascripts/mods/ngppp.js?7"></script>
+<script type="text/javascript" src="javascripts/mods/ngpp.js?8"></script>
+<script type="text/javascript" src="javascripts/mods/ngppp.js?9"></script>
 <script type="text/javascript" src="javascripts/mods/ngmmm.js?5"></script>
 <script type="text/javascript" src="javascripts/mods/ngud.js"></script>
-<script type="text/javascript" src="javascripts/game.js?7"></script>
+<script type="text/javascript" src="javascripts/game.js?10"></script>
 <script type="text/javascript" src="javascripts/sha512.js"></script>
 </body>
 </html>
